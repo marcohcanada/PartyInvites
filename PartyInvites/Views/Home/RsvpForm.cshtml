@@ -1,0 +1,72 @@
+﻿@model PartyInvites.Models.CompetitionInvite
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"><h4>Marco Hidalgo Romero, 991470628, Assignment 2, Syed Tanbeer</h4></div>
+        <div class="panel-heading text-center"><h4>RSVP</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="RsvpForm" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Your name:</label>
+                    <input class="form-control" asp-for="Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Your email:</label>
+                    <input class="form-control" asp-for="Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone">Your phone:</label>
+                    <input class="form-control" asp-for="Phone" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address">Your address:</label>
+                    <input class="form-control" asp-for="Address" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="SocialNetworkInterest">Your preferred social network:</label>
+                    <input class="form-control" asp-for="SocialNetworkInterest" />
+                </div>
+                <!--<div class="form-group">
+        <label>Will you attend?</label>
+        <select class="form-control" asp-for="WillAttend">
+            <option value="">Choose an option</option>
+            <option value="true">Yes, I'll be there</option>
+            <option value="false">No, I can't come</option>
+        </select>
+    </div>-->
+                <div class="form-group">
+                    <label>What is your technical interest?</label>
+                    <select class="form-control" asp-for="Interest">
+                        <option value="0">Internet of Things</option>
+                        <option value="1">Motion Sensor Technology</option>
+                        <option value="2">Data Analytics Tools</option>
+                        <option value="3">Computer Programming</option>
+                    </select>
+                </div>
+                <div class="text-center">
+                    <!--<button class="btn btn-primary" type="submit">
+            Submit RSVP
+        </button>-->
+                    <button class="btn btn-primary" type="submit" asp-for="AcceptInvitation">
+                        Accept Invitation
+                    </button>
+                    <button class="btn btn-primary" type="submit" asp-for="SendRegrets">
+                        Send Regrets
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
