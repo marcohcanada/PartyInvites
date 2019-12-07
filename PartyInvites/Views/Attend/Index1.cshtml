@@ -1,0 +1,32 @@
+﻿@using PartyInvites.Models
+@model IEnumerable<Attend>
+
+@{
+    ViewBag.Title = "DisplayAllStudents";
+}
+
+<h2>Display All Students</h2>
+<table border="1">
+    <tr>
+        <td>Id</td>
+        <td>Student</td>
+        <td>Accept/Regret</td>
+        <td></td>
+    </tr>
+    @foreach (Attend a in @Model)
+    {
+        <tr>
+            <td>@a.Id</td>
+            <td>@a.Student</td>
+            <td>@a.AcceptRegret</td>
+        </tr>
+    }
+
+</table>
+
+
+@{
+    ViewBag.Title = "Index1";
+}
+
+<h2>Index1</h2>

@@ -1,0 +1,17 @@
+﻿@using PartyInvites.Models
+@model IEnumerable<Student>
+
+@{
+    ViewBag.Title = "DisplayStudentNamesWithLinks";
+}
+
+<h2>Display StudentNames With Links</h2>
+<ul>
+    @foreach (Student s in Model)
+    {
+        <li>
+            @Html.ActionLink(s.Name, "DisplaySingleStudentDetails", new { id = s.Id })
+        </li>
+    }
+</ul>
+@Html.ActionLink("Go To Attend List", "Index", "Attend")

@@ -1,0 +1,28 @@
+﻿@model PartyInvites.Models.Student
+
+@{
+    ViewBag.Title = "DisplaySingleStudentDetails";
+}
+
+<h2>Display Single Student Details</h2>
+<table border="1">
+    <tr>
+        <td>Id</td>
+        <td>Student Id</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Technical Interest</td>
+        <td>Social Netwok Interest</td>
+    </tr>
+    <tr>
+        <td>@Model.Id</td>
+        <td>@Model.StudentId</td>
+        <td>@Model.Name</td>
+        <td>@Model.Email</td>
+        <td>@Model.TechnicalInterest</td>
+        <td>@Model.SocialNetworkInterest</td>
+    </tr>
+
+</table>
+
+

@@ -1,0 +1,30 @@
+﻿@using PartyInvites.Models
+@model IEnumerable<Student>
+
+@{
+    ViewBag.Title = "DisplayAllStudents";
+}
+
+<h2>Display All Students</h2>
+<table border="1">
+    <tr>
+        <td>Id</td>
+        <td>Student Id</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Technical Interest</td>
+        <td></td>
+    </tr>
+    @foreach (Student s in @Model)
+    {
+        <tr>
+            <td>@s.Id</td>
+            <td>@s.StudentId</td>
+            <td>@s.Name</td>
+            <td>@s.Email</td>
+            <td>@s.TechnicalInterest</td>
+            <td>@s.SocialNetworkInterest</td>
+        </tr>
+    }
+
+</table>
